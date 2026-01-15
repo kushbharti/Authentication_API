@@ -33,14 +33,6 @@ authapi/
 </pre>
 
 <h2>API Endpoints</h2>
-    <ul>
-        <li><strong>POST /api/register/</strong> - User Registration</li>
-        <li><strong>POST /api/login/</strong> - User Login</li>
-        <li><strong>GET /api/profile/</strong> - Get User Profile (Authentication required)</li>
-        <li><strong>POST /api/change-password/</strong> - Change Password (Authentication required)</li>
-        <li><strong>POST /api/send-reset-password-email/</strong> - Request Password Reset Email</li>
-        <li><strong>POST /api/reset-password/&lt;uid&gt;/&lt;token&gt;/</strong> - Reset Password using token</li>
-    </ul>
 <table>
         <thead>
             <tr>
