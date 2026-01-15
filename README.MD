@@ -11,19 +11,19 @@
  <h2>Folder Structure</h2>
 <pre>
 
-authentication_api/
+authapi/
 │
 ├── account/
-│ ├── models.py # Custom User model
-│ ├── serializers.py # DRF serializers for registration, login, profile, password
-│ ├── views.py # API views for auth functionality
-│ ├── renderers.py # Custom renderer for consistent response format
+│ ├── models.py
+│ ├── serializers.py
+│ ├── views.py
+│ ├── renderers.py
 │ ├── utils/
-│ │ ├── email.py # Email sending utility
-│ │ └── tokens.py # Token generation & validation
-│ └── urls.py # API route definitions
+│ │ ├── email.py
+│ │ └── tokens.py
+│ └── urls.py
 │
-├── authentication_api/
+├── authapi/
 │ ├── settings.py
 │ ├── urls.py
 │ └── wsgi.py
@@ -41,6 +41,54 @@ authentication_api/
         <li><strong>POST /api/send-reset-password-email/</strong> - Request Password Reset Email</li>
         <li><strong>POST /api/reset-password/&lt;uid&gt;/&lt;token&gt;/</strong> - Reset Password using token</li>
     </ul>
+<table>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Endpoint</th>
+                <th>Description</th>
+                <th>Authentication Required</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>POST</td>
+                <td>/api/register/</td>
+                <td>User Registration</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/api/login/</td>
+                <td>User Login</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/api/profile/</td>
+                <td>Get User Profile</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/api/change-password/</td>
+                <td>Change Password</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/api/send-reset-password-email/</td>
+                <td>Request Password Reset Email</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/api/reset-password/&lt;uid&gt;/&lt;token&gt;/</td>
+                <td>Reset Password using token</td>
+                <td>No</td>
+            </tr>
+        </tbody>
+    </table>
 
 <h2>Installation & Setup</h2>
     <ol>
